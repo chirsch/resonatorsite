@@ -1,0 +1,52 @@
+body {
+  background: linear-gradient(45deg, #333, #222);
+  margin: 0;
+  text-rendering: optimizeLegibility;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 100vh;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+h1 { 
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 4rem;
+  font-weight: 700;
+  color: white;
+  margin: 0;
+  padding: 0;
+  letter-spacing: 0.2rem;
+}
+
+p {
+  font-family: 'PT Sans', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 200;
+  color: rgba(255,255,255,0.6);
+}
+
+.resonate {
+  animation: 1.3s infinite normal resonatePosition;
+}
+
+@keyframes resonatePosition {
+  5%, 10%, 15%, 20% {
+    transform: translate3d(0px, 0, 0);
+    color: rgba(255,255,255,1);
+    text-shadow: 0px 0px 4px rgba(255, 255, 255, 0.2);
+  }
+  2.5%, 7.5%, 12.5%, 17.5% {
+    transform: translate3d(1px, 0, 0);
+    color: rgba(255,255,255,0.8);
+    text-shadow: 0px 0px 4px rgba(255, 60, 60, 0.2);
+  }
+}
